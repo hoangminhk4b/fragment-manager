@@ -10,16 +10,16 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class FragmentNext extends Fragment {
+public class FragmentNext1 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_next, container, false);
+        View view = inflater.inflate(R.layout.fragment_next1, container, false);
         Button button = view.findViewById(R.id.nextPage);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getFragmentManager().beginTransaction().replace(R.id.container, new FragmentNext1()).addToBackStack(null).commit();
+                getFragmentManager().beginTransaction().replace(R.id.container, new FragmentNext1()).commit();
             }
         });
         return view;
